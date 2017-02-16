@@ -8,3 +8,7 @@ log_files.sh reads input files and creates a log.txt in the output directory (cu
 
 program_checklist.py displays a checklist of available programs to the run the sample on
 
+named program "pipeline_manager"
+
+
+
