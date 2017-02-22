@@ -1,0 +1,4 @@
+process_manager/__pycache__/*
+process_manager/.ipynb_checkpoints/*
+process_manager/.cache/*
+process_manager/tests/__pycache__/*
