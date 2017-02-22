@@ -2,26 +2,28 @@
 
 ##Import functions
 
-import os
-from dir_utils import * 
+import os, subprocess
+from utility import * 
 
 
 ##Designate & create directories
 
 #Path to process _manager folder
-PM_PATH = os.path.dirname(os.path.abspath(__file__))
+HOME_PATH = os.path.dirname(os.path.abspath(__file__))
 
 #Inputdirectory
-INDIR = (PM_PATH + "/data_input")
+INDIR = (HOME_PATH + "/data_input")
 create_directory(INDIR)
 
 #Outputdirectory
-OUTDIR = (PM_PATH +"/data_output")
+OUTDIR = (HOME_PATH +"/data_output")
 create_directory(OUTDIR)
 
 #Processes directory
-PRCSDIR = (PM_PATH + "/processes")
+PRCSDIR = (HOME_PATH + "/processes")
 create_directory(PRCSDIR)
+
+run_program(HOME_PATH + '/checklist_gui.py')
 
 #NOTES:
 

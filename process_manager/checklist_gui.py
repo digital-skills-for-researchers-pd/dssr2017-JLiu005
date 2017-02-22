@@ -1,13 +1,14 @@
 from tkinter import *
-import sys, glob, os, subprocess
-from utils import * 
+from utility import * 
+import sys, glob, os, subprocess, datetime
+
 
 #Set directory of processes
 HOME_PATH = os.path.dirname(os.path.abspath(__file__))
-PF_PATH = HOME_PATH + '/processes/'
+PRCS_PATH = HOME_PATH + '/processes/'
 
 #Search directory for processes of certain file types
-process_list = find_scripts(PF_PATH)
+process_list = find_scripts(PRCS_PATH)
 
 class Checkbar(Frame):
    def __init__(self, parent=None, picks=[], side=LEFT, anchor=W):
@@ -32,9 +33,12 @@ lng.config(relief=GROOVE, bd=2)
 def allstates(): 
 	state = list(lng.state())
 	for i in range(len(state)):
-	    if state[i] == 1:
-	        run_program(PF_PATH + process_list[i])
+		if state[i] == 1:
+			run_program(PRCS_PATH + process_list[i])
+			with open(HOME_PATH + '/data_output/process_completion_log', 'a') as f:
+				print(str(datetime.datetime.now()) + " "+ PRCS_PATH + process_list[i], file=f)
 
+	print("Processes finished running")
 
 Button(root, text='Quit', command=root.quit).pack(side=RIGHT)
 Button(root, text='Run Processes', command=allstates).pack(side=RIGHT)
