@@ -15,6 +15,7 @@ def find_scripts(location,types = ['*.py', '*.sh']):
 	process_list = []
 	for files in types:
    		process_list.extend(glob.glob(files))
+	process_list.sort()
 	return process_list
 
 #Deciding which interpreter is needed to run the program
