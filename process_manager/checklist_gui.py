@@ -5,6 +5,7 @@ import sys, glob, os, subprocess, datetime
 
 #Set directory of processes
 HOME_PATH = os.path.dirname(os.path.abspath(__file__))
+# DIRECTORY LINE >>Change this to the directory of processes if needed<<
 PRCS_PATH = HOME_PATH + '/processes/'
 
 #Search directory for processes of certain file types
