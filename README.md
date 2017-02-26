@@ -39,3 +39,5 @@ Python v3.6
 5)Check the <data_output> directory for the <process_completion_log.txt>. This file contains information of what processes are run and the time they began
 6)The message 'Processes finished running' will appear on the terminal when all the designated processes have been run
 7)Select more processes to run OR close the program using the 'Quit' button
+
+##Copyright under the MIT licence. Refer to LICENSE.txt for more details
