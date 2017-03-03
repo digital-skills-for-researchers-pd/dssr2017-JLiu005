@@ -18,7 +18,7 @@ A multitude of bioinformatics programs are needed to gather sufficient data for 
 4) Will create a log file detailing what scripts were run at what time
 
 ##Project status:	
-Complete
+Complete & tested
 
 ##Possible future directions:	
 1) Can specify the input and output files of the processes run	

@@ -32,7 +32,7 @@ lng.config(relief=GROOVE, bd=2)
 
 #Runs selected processes upon clicking 'Run Processes' button
 def allstates(): 
-	state = list(lng.state())
+      state = list(lng.state())
 	for i in range(len(state)):
 		if state[i] == 1:
 			run_program(PRCS_PATH + process_list[i])
