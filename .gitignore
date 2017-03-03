@@ -4,4 +4,6 @@ process_manager/.cache/*
 process_manager/tests/__pycache__/*
 process_manager/data_input/*
 process_manager/data_output/*
+dist_kde_graph_tool/.ipynb_checkpoints/*
+dist_kde_graph_tool/__pycache__/*
 

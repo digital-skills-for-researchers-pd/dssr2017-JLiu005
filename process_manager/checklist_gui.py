@@ -5,6 +5,7 @@ import sys, glob, os, subprocess, datetime
 
 #Set directory of processes
 HOME_PATH = os.path.dirname(os.path.abspath(__file__))
+# DIRECTORY LINE >>Change this to the directory of processes if needed<<
 PRCS_PATH = HOME_PATH + '/processes/'
 
 #Search directory for processes of certain file types
@@ -17,7 +18,7 @@ class Checkbar(Frame):
       for pick in picks:
          var = IntVar()
          chk = Checkbutton(self, text=pick, variable=var)
-         chk.pack(side=side, anchor=anchor, expand=YES)
+         chk.pack(side=TOP, anchor=anchor, expand=YES)
          self.vars.append(var)
    def state(self):
       return map((lambda var: var.get()), self.vars)
@@ -31,7 +32,7 @@ lng.config(relief=GROOVE, bd=2)
 
 #Runs selected processes upon clicking 'Run Processes' button
 def allstates(): 
-	state = list(lng.state())
+      state = list(lng.state())
 	for i in range(len(state)):
 		if state[i] == 1:
 			run_program(PRCS_PATH + process_list[i])
